@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans'; // Updated import for GeistSans
-import { GeistMono } from 'geist/font/mono'; // Updated import for GeistMono
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 import '../styles/globals.css';
 
 // Configuração das fontes Geist.

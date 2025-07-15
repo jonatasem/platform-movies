@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.scss';
 
 /**
  * @component Header
@@ -6,8 +7,13 @@ import React from 'react';
  */
 const Header: React.FC = () => {
   return (
-    <header className="container-header bg-blue-600 text-white p-4 text-center">
-      <p className="text-xl font-bold">CineFlix</p>
+    <header className='container-header'>
+      <ul>
+        <li>icon</li>
+        <li>icon</li>
+        <li>icon</li>
+        <li>icon</li>
+      </ul>
     </header>
   );
 };

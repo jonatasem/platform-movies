@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import Home from './home/page';
 import Footer from '../components/Footer';
+import '../styles/page.module.css'
 
 /**
  * @component App
@@ -9,9 +10,8 @@ import Footer from '../components/Footer';
 export default function App() {
   return (
     <>
-      <Header />
-      <main className="min-h-screen">
-        {' '}
+      <main className='container-app'>
+        <Header />
         <Home />
       </main>
       <Footer />
