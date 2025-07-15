@@ -4,7 +4,7 @@ import './index.scss';
 
 import React, { useEffect, useState } from 'react';
 import { fetchMovies } from '../../services/movieService';
-import { FaRegHeart, FaHeart } from 'react-icons/fa6';
+import { FaRegHeart } from 'react-icons/fa6';
 import useMovieStore from '../../store/movieStore';
 import { Movie } from '../../types';
 import Loading from '../Loading';
@@ -59,16 +59,16 @@ const MovieList: React.FC<MovieListProps> = ({ setSelectedMovie }) => {
   }
 
   return (
-    <section>
+    <section className='movie-list'>
       <h1>Filmes</h1>
       {movies.length === 0 ? (
         <p>Nenhum filme encontrado.</p>
       ) : (
-        <ul>
+        <ul className='movie-list-main'>
           {movies.map((movie) => (
             <li key={movie.id} >
               <div
-                className="movie-item-content relative"
+                className="movie-item-content"
                 onMouseEnter={(e) => e.currentTarget.classList.add('show-heart')}
                 onMouseLeave={(e) => e.currentTarget.classList.remove('show-heart')}
               >
@@ -87,7 +87,7 @@ const MovieList: React.FC<MovieListProps> = ({ setSelectedMovie }) => {
                   />
                 )}
               </div>
-              <h2 className="text-lg font-semibold text-center py-3">{movie.title}</h2>
+              <h2>{movie.title}</h2>
             </li>
           ))}
         </ul>
